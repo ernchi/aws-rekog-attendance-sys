@@ -1,7 +1,5 @@
 'use strict';
 
-/* Author: Ern Chi Khoo */
-
 const { addFace, findFace, removeFaceFromCollection } = require('./lib/rekognition');
 const { saveToDynamoDB, removeFromDynamoDB } = require('./lib/dynamodb');
 const CollectionId = 'COLLECTION_ID';
