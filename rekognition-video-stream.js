@@ -1,23 +1,21 @@
-/* Author: Ern Chi Khoo */
-
 'use strict';
 
 var AWS = require('aws-sdk');
 var request = require('request');
 var dynamodb = new AWS.DynamoDB();
-const tableName = 'attendance-list'; // DynamoDB table to record attendance
+const tableName = 'TABLE_NAME'; // DynamoDB table to record attendance
 
-const eventId = '123';
-const sessionId = '123';
+const eventId = 'EVENT_ID';
+const sessionId = 'SESSION_ID';
 
 // Authorization token for API 
-const tokenUserProfile = 'a0123'; 
-const tokenMarkAttendance = 'a0123';
+const tokenUserProfile = 'TOKEN'; 
+const tokenMarkAttendance = 'TOKEN';
 
 // URL for API
-var host = 'xxx';
-var getUserApiURL = host + 'xxx';
-var markAttendanceApiURL = host + 'xxx' + eventId + '/sessions/' + sessionId + '/scans';
+var host = 'HOST';
+var getUserApiURL = host + 'URL';
+var markAttendanceApiURL = host + 'URL' + eventId + '/sessions/' + sessionId + '/scans';
 
 var unknownCount = 0; // Number of unknown faces
 
@@ -190,7 +188,7 @@ exports.handler = (event, context, callback) => {
                     if (face.MatchedFaces != null && Object.keys(face.MatchedFaces).length > 0) {
                         var matchedFace = getHighestConfidence(face.MatchedFaces);
                         var externalId = matchedFace.Face.ExternalImageId;
-                        var email = externalId + "@xxx.com";
+                        var email = externalId + "@EMAIL";
                         // Call API to retrieve user id number from database
                         var userId = await getUserProfileByEmail(email);
                         console.log("Checking for attendance...");
