@@ -2,7 +2,7 @@
 Facial recognition based attendance taking system using AWS Rekognition. 
 
 ## Background 
-During my internship, I was tasked with creating an attendance taking system utilizing facial recognition technology for our company's technology division's Townhall Event. So, we used various AWS Services and an open source android app (to host the video stream). 
+During my internship, I was tasked with creating an attendance taking system utilizing facial recognition technology for our company's technology division's Townhall Event. So, we used various AWS Services and [this Android app](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/producersdk-android-downloadcode.html) that hosts the video stream. 
 
 ### Event Flow
 1. Attendees will first have to register themselves for the event through the Company Employee App. 
