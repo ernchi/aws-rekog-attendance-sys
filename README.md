@@ -20,7 +20,7 @@ During my internship, I was tasked with creating an attendance taking system uti
 
 ### Other Features
 - The photo in the rekognition collection will be changed when the attendee changes their profile picture in the app
-- The Lambda function will cross check with a DynamoDB table to see if a person has already attended, which prevents the API being called many times 
+- The Lambda function will cross check with a DynamoDB table to see if a person has already been marked as registered, which reduces the redundancy of calling the APIs multiple times 
 
 ### Notes
 - This repo only consists of the two Lambda functions that are responsible for indexing faces and marking attendance, the source code for the android app is not present 
